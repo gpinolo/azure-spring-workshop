@@ -1,0 +1,13 @@
+BASH
+
+Setting variables for this project
+
+AZ_RESOURCE_GROUP=azure-spring-workshop
+AZ_DATABASE_NAME=dbname
+AZ_LOCATION=francesouth
+AZ_MYSQL_USERNAME=spring
+AZ_MYSQL_PASSWORD=Gianni20!
+AZ_LOCAL_IP_ADDRESS=151.77.107.0
+
+List location
+az account list-locations --query '[].name'

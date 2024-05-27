@@ -1,21 +1,30 @@
-# Getting Started
+# Spring Boot app demo on Azure
 
-### Reference Documentation
-For further reference, please consider the following sections:
+This is the implementation of [Deploy a Spring Boot app to Azure App Service](https://learn.microsoft.com/en-us/training/modules/deploy-java-spring-boot-app-service-mysql/) example
+contained in  [Get started with Java on Azure](https://learn.microsoft.com/en-us/training/paths/get-started-java-azure/) microsoft learning path:
+the example shows how to deploy a spring boot application on azure using the [azure-webapp-maven-plugin](https://github.com/microsoft/azure-maven-plugins/blob/develop/azure-webapp-maven-plugin/README.md).
 
-* [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
-* [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/3.1.5.RELEASE/maven-plugin/reference/html/)
-* [Create an OCI image](https://docs.spring.io/spring-boot/docs/3.1.5.RELEASE/maven-plugin/reference/html/#build-image)
-* [Spring Web](https://docs.spring.io/spring-boot/docs/3.1.5.RELEASE/reference/htmlsingle/index.html#web)
-* [Spring Data JPA](https://docs.spring.io/spring-boot/docs/3.1.5.RELEASE/reference/htmlsingle/index.html#data.sql.jpa-and-spring-data)
+## Prerequisite
+To deploy the the application you need the following resources:
+
+* An _Azure_ account
+* A _Mysql_ resource deployed in _Azure Portal_ as described in reference documentation
+
+## Start application on local machine
+
+To start application on your local machine launch the following command from project root folder:
+
+~~~bash
+mvnw.cmd spring-boot:run
+~~~
+
+## Deploy application on azure
+
+To deploy application on Azure launch the following command from project root folder:
+
+~~~bash
+mvn package com.microsoft.azure:azure-webapp-maven-plugin:2.13.0:deploy
+~~~
+
+### Other Documentation
 * [Azure for developer](https://learn.microsoft.com/it-it/azure/developer/java/?WT.mc_id=java-10785-ropreddy)
-
-### Guides
-The following guides illustrate how to use some features concretely:
-
-* [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
-* [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
-* [Building REST services with Spring](https://spring.io/guides/tutorials/rest/)
-* [Accessing Data with JPA](https://spring.io/guides/gs/accessing-data-jpa/)
-* [Accessing data with MySQL](https://spring.io/guides/gs/accessing-data-mysql/)
-
